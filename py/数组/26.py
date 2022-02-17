@@ -1,5 +1,5 @@
 class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
+    def removeDuplicates(self, nums):
         if not nums:
             return 0
         left, right = 0, 1
@@ -9,4 +9,7 @@ class Solution:
             else:
                 left += 1
                 nums[left] = nums[right]
-        return left
+        return left + 1
+m = Solution()
+answer = m.removeDuplicates([0,0,1,1,1,2,2,3,3,4])
+print(answer)
